@@ -1,9 +1,5 @@
 package co.com.tns.lazy.load.domain.business;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import static sun.swing.MenuItemLayoutHelper.max;
 
 /**
@@ -25,4 +21,5 @@ public class Trip {
         return listOfWeightsSorted;
 
     }
+
 }

@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TripTest {
@@ -22,6 +23,12 @@ public class TripTest {
         //Act
         int [] listOfWeightsCurrent = trip.sortListOfWeights(listOfWeights);
         //Assert
-        Assert.assertArrayEquals(listOfWeightsExpected,listOfWeightsCurrent);
+        assertArrayEquals(listOfWeightsExpected,listOfWeightsCurrent);
+    }
+
+    @Test
+    public void shouldSeparateList(){
+        int[] list = {2,3,29,2,1,3,1,2,3};
+
     }
 }
