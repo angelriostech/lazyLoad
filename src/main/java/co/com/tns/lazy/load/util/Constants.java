@@ -2,8 +2,9 @@ package co.com.tns.lazy.load.util;
 
 public class Constants {
 
-	public static final String FILE_ERROR = "Error en la creación del archivo.";
-	public static final String FILE_ERROR_LECTURE = "Error en la lectura del archivo. Posiblemente contiene caracteres no válidos";
+	public static final String FILE_ERROR = "Error en la creaciï¿½n del archivo.";
+	public static final String FILE_ERROR_LECTURE = "Error en la lectura del archivo. Posiblemente contiene caracteres no vï¿½lidos";
 	public static final String FILE_ERROR_NOT_FOUND = "El archivo no exite.";
 
+    public static final String BASE_PATH = "lazyLoad";
 }

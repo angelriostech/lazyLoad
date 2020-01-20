@@ -11,6 +11,10 @@ import static sun.swing.MenuItemLayoutHelper.max;
  */
 public class Trip {
 
+	public Trip(){
+		super();
+	}
+
 	public int[] sortListOfWeights(int[] listOfWeights) {
 		int[] listOfWeightsSorted = new int[listOfWeights.length];
 		for (int i = 0; i < listOfWeights.length; i++) {
