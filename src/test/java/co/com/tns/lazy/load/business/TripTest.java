@@ -31,12 +31,18 @@ public class TripTest {
 		listOfWeightsOrdered.add(14);
 		
 		List<Integer> listOfWeightsResult = trip.sortListOfWeights(listOfWeights);
-		System.out.println(listOfWeightsResult.toString() );
-		System.out.println(listOfWeightsOrdered.toString() );
 		
 		assertEquals(listOfWeightsResult, listOfWeightsOrdered);
 	}
 	
-	
+	@Test
+	public void debeContarLosViajes() {
+		
+		List<Integer> lista = new ArrayList<Integer>();
+		lista.add(50);
+		int actual = trip.retornarNumeroDeViajes(lista);
+		assertEquals(1, actual);
+	}
+
 	
 }

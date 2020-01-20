@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Trip {
 
-	public Trip(){
+	public Trip() {
 		super();
 	}
 
@@ -17,11 +17,11 @@ public class Trip {
 		return listOfWeights;
 	}
 
-	public int retornarNumeroDeViajes(int[] lista) {
+	public int retornarNumeroDeViajes(List<Integer> lista) {
 		int incrementable = 0;
-		int cantidadElemetosDisponibles = lista.length;
-		for (int i = 0; i < lista.length; i++) {
-			if (lista[i] >= 50) {
+		int cantidadElemetosDisponibles = lista.size();
+		for (int i = 0; i < lista.size(); i++) {
+			if (lista.get(i) >= 50) {
 				incrementable += 1;
 				cantidadElemetosDisponibles--;
 			} else {
@@ -33,10 +33,9 @@ public class Trip {
 					int aumento = 2;
 					int pesoBolsa = 0;
 					while (pesoBolsa < 50 && cantidadElemetosDisponibles > 0) {
-						pesoBolsa = lista[i] * aumento;
+						pesoBolsa = lista.get(i) * aumento;
 						aumento++;
 						cantidadElemetosDisponibles--;
-
 					}
 					cantidadElemetosDisponibles--;
 					incrementable++;
