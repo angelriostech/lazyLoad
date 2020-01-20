@@ -1,7 +1,5 @@
 package co.com.tns.lazy.load.domain.business;
 
-import java.awt.List;
-
 /**
  * Para las operaciones de organizar listas y algoritmo de calcular viajes
  */
