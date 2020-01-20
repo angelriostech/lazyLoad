@@ -11,6 +11,10 @@ import co.com.tns.lazy.load.util.Constants;
 
 public class FileManager {
 
+	public FileManager() {
+		super();
+	}
+
 	public List<Integer> convertirArchivoALista(File file) throws FileNotFoundException {
 		List<Integer> archivoEnTipoLista = new ArrayList<>();
 		Scanner lector = new Scanner(file);

@@ -11,14 +11,17 @@ import co.com.tns.lazy.load.util.Constants;
 
 public class FileService {
 
-	private FileManager fileManager = new FileManager();
-
+	@Autowired
+	private FileManager fileManager;
+	
+	public FileService() {
+		super();
+	}
+	
 	public void upload(File file) throws FileNotFoundException {
 		try {
 			List<Integer> archivoEnTipoLista = fileManager.convertirArchivoALista(file);
-			for (Integer integer : archivoEnTipoLista) {
-				System.out.println(integer);
-			}
+			
 		}catch (Exception exception) {
 			throw new BusinessException(Constants.FILE_ERROR_NOT_FOUND, exception);
 		}
