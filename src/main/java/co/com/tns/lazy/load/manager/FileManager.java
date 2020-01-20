@@ -17,7 +17,8 @@ public class FileManager {
 		try {
 			while (lector.hasNextLine()) {
 				String line = lector.nextLine();
-				archivoEnTipoLista.add(Integer.parseInt(line));
+				archivoEnTipoLista.add(Integer.parseInt(line.trim()));
+				System.out.println(line.trim());
 			}
 		} catch (Exception e) {
 			throw new BusinessException(Constants.FILE_ERROR_LECTURE, e);
