@@ -21,7 +21,7 @@ public class Manager {
         int elements=0;
         int position=0;
         for (int i = 0; i < days; i++) {
-            int[] listSeparate= new int[100];
+
             if(i>0){
                 position++;
                 elements = list[position+1];
@@ -29,7 +29,7 @@ public class Manager {
             else if(i==0) {
                 elements = list[1];
             }
-
+            int[] listSeparate= new int[elements];
             for ( int j=0;j <elements; j++) {
 
                  listSeparate[j] = list[position + 2];
