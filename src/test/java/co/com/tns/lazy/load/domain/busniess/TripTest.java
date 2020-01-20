@@ -19,14 +19,15 @@ public class TripTest {
 
     @Test
     public void youMustSeparateAList() {
-        int []list = {2,4,30,29,12,1,2,3,4};
+
+        int []list = {4,4,30,29,12,1,2,3,4,3,9,10,11,5,45,46,47,48,49};
         //ArrayList<Integer> listElements = new ArrayList<>();
 
-        int days;
         Manager manager = new Manager();
-        //days
-        int[]resultado =manager.separateList(list);
-        assertEquals(1,resultado[3],0.0001);
+
+        int[][]resultado =manager.separateList(list);
+
+        assertEquals(49,resultado[3][4],0.0001);
 
     }
 }

@@ -11,27 +11,36 @@ import java.util.*;
 public class Manager {
 
 
-    public int[] separateList(int[] list    ) {
+    public int[][] separateList(int[] list) {
         //   List<Integer> list = new ArrayList<>();
-
-        int[] listSeparate=list;
-
         int days = list[0];
-        int elements;
-        int posicion=0;
-        for (int i = 0; i < days; i++) {
 
-            elements = list[i + posicion+1];
+
+        int[][] listOe = new int[days][days];
+
+        int elements=0;
+        int position=0;
+        for (int i = 0; i < days; i++) {
+            int[] listSeparate= new int[100];
+            if(i>0){
+                position++;
+                elements = list[position+1];
+            }
+            else if(i==0) {
+                elements = list[1];
+            }
 
             for ( int j=0;j <elements; j++) {
-                     listSeparate[j] = list[j + 2];
-                       posicion=j;
+
+                 listSeparate[j] = list[position + 2];
+                       position++;
 
             }
-            return  listSeparate;
-        }
+            listOe[i] = listSeparate;
 
-return listSeparate;
+        }
+        return listOe;
+
 
     }
 }
