@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static sun.swing.MenuItemLayoutHelper.max;
+import java.awt.List;
 
 /**
  * Para las operaciones de organizar listas y algoritmo de calcular viajes
@@ -25,4 +26,36 @@ public class Trip {
         return listOfWeightsSorted;
 
     }
+	public int retornarNumeroDeViajes(int[] lista) {
+		int incrementable = 0;
+		int cantidadElemetosDisponibles = lista.length;
+		for (int i = 0; i < lista.length; i++) {
+			if (lista[i] >= 50) {
+				incrementable += 1;
+				cantidadElemetosDisponibles--;
+			} else {
+				if (cantidadElemetosDisponibles <= 1) {
+					return incrementable;
+				}
+
+				else {
+					int aumento = 2;
+					int pesoBolsa = 0;
+					while (pesoBolsa < 50 && cantidadElemetosDisponibles > 0) {
+						pesoBolsa = lista[i] * aumento;
+						aumento++;
+						cantidadElemetosDisponibles--;
+
+					}
+					cantidadElemetosDisponibles--;
+					incrementable++;
+				}
+
+			}
+
+		}
+		return incrementable;
+
+	}
+
 }

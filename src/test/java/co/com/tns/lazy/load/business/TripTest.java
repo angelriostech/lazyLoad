@@ -1,13 +1,9 @@
 package co.com.tns.lazy.load.business;
 
 import co.com.tns.lazy.load.domain.business.Trip;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class TripTest {
 
@@ -22,6 +18,6 @@ public class TripTest {
         //Act
         int [] listOfWeightsCurrent = trip.sortListOfWeights(listOfWeights);
         //Assert
-        Assert.assertArrayEquals(listOfWeightsExpected,listOfWeightsCurrent);
+        assertArrayEquals(listOfWeightsExpected,listOfWeightsCurrent);
     }
 }
