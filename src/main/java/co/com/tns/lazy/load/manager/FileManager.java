@@ -30,7 +30,37 @@ public class FileManager {
 			lector.close();
 		}
 		return archivoEnTipoLista;
+	}
 
+	public int[][] separateList(int[] list) {
+		//   List<Integer> list = new ArrayList<>();
+		int days = list[0];
+
+
+		int[][] listDays = new int[days][days];
+
+		int elements=0;
+		int position=0;
+		for (int i = 0; i < days; i++) {
+
+			if(i>0){
+				position++;
+				elements = list[position+1];
+			}
+			else if(i==0) {
+				elements = list[1];
+			}
+			int[] listSeparate= new int[elements];
+			for ( int j=0;j <elements; j++) {
+
+				listSeparate[j] = list[position + 2];
+				position++;
+
+			}
+			listDays[i] = listSeparate;
+
+		}
+		return listDays;
 	}
 
 }

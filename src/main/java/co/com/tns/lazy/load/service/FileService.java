@@ -16,7 +16,6 @@ public class FileService {
 
 	@Autowired
 	private FileManager fileManager;
-
 	//@Autowired
 	//private Trip trip;
 	
