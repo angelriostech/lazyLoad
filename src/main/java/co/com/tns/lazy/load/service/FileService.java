@@ -12,6 +12,7 @@ import co.com.tns.lazy.load.manager.FileManager;
 import co.com.tns.lazy.load.util.Constants;
 import org.springframework.stereotype.Service;
 
+@Service
 public class FileService {
 
 	@Autowired

@@ -8,7 +8,9 @@ import java.util.Scanner;
 
 import co.com.tns.lazy.load.exception.BusinessException;
 import co.com.tns.lazy.load.util.Constants;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FileManager {
 
 	public FileManager() {

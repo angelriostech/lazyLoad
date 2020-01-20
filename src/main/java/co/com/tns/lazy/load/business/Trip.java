@@ -1,11 +1,15 @@
 package co.com.tns.lazy.load.business;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Collections;
 import java.util.List;
 
 /**
  * Para las operaciones de organizar listas y algoritmo de calcular viajes
  */
+
+@Component
 public class Trip {
 
 	public Trip() {
