@@ -12,7 +12,7 @@ public final class FileUtil {
 
     private FileUtil(){super();}
 
-    public static File convert(MultipartFile file) {
+    public static File convertToFile(MultipartFile file) {
         try{
             File convFile = new File(file.getOriginalFilename());
             convFile.createNewFile();
@@ -24,4 +24,5 @@ public final class FileUtil {
             throw new BusinessException(Constants.FILE_ERROR, e);
         }
     }
+    
 }
