@@ -28,7 +28,7 @@ public class FileService {
 	public void upload(File file) throws FileNotFoundException {
 		try {
 			List<Integer> archivoEnTipoLista = fileManager.convertirArchivoALista(file);
-			trip.sortListOfWeights(archivoEnTipoLista);
+
 		}catch (Exception exception) {
 			throw new BusinessException(Constants.FILE_ERROR_NOT_FOUND, exception);
 		}

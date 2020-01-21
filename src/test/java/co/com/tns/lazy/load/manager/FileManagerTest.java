@@ -80,8 +80,7 @@ public class FileManagerTest {
 
 	}
 	@Test
-	public  void shouldReturnOneListElements()
-	{
+	public  void shouldReturnOneListElements() {
 		List<Integer> list = new ArrayList<>();
 		list.add(4);
 		list.add(4);
