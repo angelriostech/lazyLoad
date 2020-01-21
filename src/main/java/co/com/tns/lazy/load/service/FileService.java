@@ -37,6 +37,7 @@ public class FileService {
 						(trip.retornarNumeroDeViajes(trip.sortListOfWeights(listSeparatedByListElements.get(i))));
 
 			}
+			//trip.retornarNumeroDeViajes(trip.sortListOfWeights(fileManager.showListOfElements(listSeparatedByListElements)));
 
 		}catch (Exception exception) {
 			throw new BusinessException(Constants.FILE_ERROR_NOT_FOUND, exception);

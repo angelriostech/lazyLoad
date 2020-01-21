@@ -67,14 +67,6 @@ public class FileManager {
 
 
 
-	public void showListOfElements(List<List> list) {
-		Trip trip = new Trip();
 
-		for(int i=0; i<list.size(); i++)
-		{
-			trip.sortListOfWeights(list.get(i));
-		}
-
-	}
 
 }
