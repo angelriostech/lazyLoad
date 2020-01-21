@@ -62,9 +62,8 @@ public class FileManagerTest {
 		object.add(29);
 		object.add(12);
 		object.add(1);
-		//List<List> resultado = manager.separateList(list);
+		List<List> resultado = fileManager.separateList(list);
 
-		//Assert.assertEquals(object,resultado.get(0));
+		Assert.assertEquals(object, resultado.get(0));
 	}
-
 }

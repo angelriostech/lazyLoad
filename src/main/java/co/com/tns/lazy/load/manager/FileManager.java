@@ -1,16 +1,14 @@
 package co.com.tns.lazy.load.manager;
 
+import co.com.tns.lazy.load.exception.BusinessException;
+import co.com.tns.lazy.load.util.Constants;
+import org.springframework.stereotype.Component;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
-
-import co.com.tns.lazy.load.business.Trip;
-import co.com.tns.lazy.load.exception.BusinessException;
-import co.com.tns.lazy.load.util.Constants;
-import org.springframework.stereotype.Component;
 
 @Component
 public class FileManager {
@@ -26,7 +24,6 @@ public class FileManager {
 			while (lector.hasNextLine()) {
 				String line = lector.nextLine();
 				archivoEnTipoLista.add(Integer.parseInt(line.trim()));
-				System.out.println(line.trim());
 			}
 		} catch (Exception e) {
 			throw new BusinessException(Constants.FILE_ERROR_LECTURE, e);
@@ -37,7 +34,6 @@ public class FileManager {
 	}
 
 	public List<List> separateList(List<Integer> list) {
-		//   List<Integer> list = new ArrayList<>();
 		int days = list.get(0);
 
 		List<List> listDays = new ArrayList<>();
@@ -64,9 +60,4 @@ public class FileManager {
 		}
 		return listDays;
 	}
-
-
-
-
-
 }

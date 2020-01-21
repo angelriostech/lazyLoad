@@ -15,17 +15,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class FileService {
 
-
 	@Autowired
 	private FileManager fileManager;
 
 	@Autowired
 	private Trip trip;
-	
-	public FileService() {
-		super();
-	}
-	
+
 	public String upload(File file) throws FileNotFoundException {
 		try {
 			List<Integer> archivoEnTipoLista = fileManager.convertirArchivoALista(file);
@@ -37,10 +32,10 @@ public class FileService {
 						(trip.retornarNumeroDeViajes(trip.sortListOfWeights(listSeparatedByListElements.get(i))));
 
 			}
-			//trip.retornarNumeroDeViajes(trip.sortListOfWeights(fileManager.showListOfElements(listSeparatedByListElements)));
 			return tripsByDay;
+
 		}catch (Exception exception) {
-			throw new BusinessException(Constants.FILE_ERROR_NOT_FOUND, exception);
+			throw new BusinessException(Constants.FILE_ERROR_LECTURE, exception);
 		}
 	}
 	

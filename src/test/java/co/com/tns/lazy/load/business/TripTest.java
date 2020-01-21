@@ -16,7 +16,6 @@ public class TripTest {
 
 	@Test
 	public void shouldSortAList() {
-
 		List<Integer> listOfWeights = new ArrayList<Integer>();
 		listOfWeights.add(5);
 		listOfWeights.add(3);
@@ -32,18 +31,14 @@ public class TripTest {
 		listOfWeightsOrdered.add(1);
 		
 		List<Integer> listOfWeightsResult = trip.sortListOfWeights(listOfWeights);
-		
 		assertEquals(listOfWeightsResult, listOfWeightsOrdered);
 	}
 	
 	@Test
 	public void debeContarLosViajes() {
-		
 		List<Integer> lista = new ArrayList<Integer>();
 		lista.add(50);
 		int actual = trip.retornarNumeroDeViajes(lista);
 		assertEquals(1, actual);
 	}
-
-	
 }
