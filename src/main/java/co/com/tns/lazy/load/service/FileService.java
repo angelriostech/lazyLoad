@@ -15,28 +15,21 @@ import org.springframework.stereotype.Service;
 @Service
 public class FileService {
 
-	@Autowired
-	private FileManager fileManager;
+    @Autowired
+    private FileManager fileManager;
 
-	@Autowired
-	private Trip trip;
+    @Autowired
+    private Trip trip;
 
-	public String upload(File file) throws FileNotFoundException {
-		try {
-			List<Integer> archivoEnTipoLista = fileManager.convertirArchivoALista(file);
-			List<List> listSeparatedByListElements = fileManager.separateList(archivoEnTipoLista);
-			String tripsByDay=" ";
-			for (int i=0; i<listSeparatedByListElements.size(); i++)
-			{
-				tripsByDay= tripsByDay + "Case #"+String.valueOf(i+1)+": "+ String.valueOf
-						(trip.retornarNumeroDeViajes(trip.sortListOfWeights(listSeparatedByListElements.get(i))))+"\n";
+    public String upload(File file) throws FileNotFoundException {
+        try {
+            List<Integer> archivoEnTipoLista = fileManager.convertirArchivoALista(file);
+            //List<List> listSeparatedByListElements = fileManager.separateList(archivoEnTipoLista);
+			return fileManager.maximizeElementsByDay(archivoEnTipoLista);
 
-			}
-			return tripsByDay;
+        } catch (Exception exception) {
+            throw new BusinessException(Constants.FILE_ERROR_LECTURE, exception);
+        }
+    }
 
-		}catch (Exception exception) {
-			throw new BusinessException(Constants.FILE_ERROR_LECTURE, exception);
-		}
-	}
-	
 }
