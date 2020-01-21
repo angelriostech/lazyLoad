@@ -17,7 +17,7 @@ public class Trip {
 	}
 
 	public List<Integer> sortListOfWeights(List<Integer> listOfWeights) {
-		Collections.sort(listOfWeights);
+		Collections.sort(listOfWeights,Collections.reverseOrder());
 		return listOfWeights;
 	}
 

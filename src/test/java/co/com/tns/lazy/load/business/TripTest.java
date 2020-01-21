@@ -22,14 +22,14 @@ public class TripTest {
 		listOfWeights.add(3);
 		listOfWeights.add(12);
 		listOfWeights.add(14);
-		listOfWeights.add(0);
+		listOfWeights.add(1);
 		
 		List<Integer> listOfWeightsOrdered = new ArrayList<Integer>();
-		listOfWeightsOrdered.add(0);
-		listOfWeightsOrdered.add(3);
-		listOfWeightsOrdered.add(5);
-		listOfWeightsOrdered.add(12);
 		listOfWeightsOrdered.add(14);
+		listOfWeightsOrdered.add(12);
+		listOfWeightsOrdered.add(5);
+		listOfWeightsOrdered.add(3);
+		listOfWeightsOrdered.add(1);
 		
 		List<Integer> listOfWeightsResult = trip.sortListOfWeights(listOfWeights);
 		

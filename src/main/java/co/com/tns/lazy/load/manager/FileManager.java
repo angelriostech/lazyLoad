@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+import co.com.tns.lazy.load.business.Trip;
 import co.com.tns.lazy.load.exception.BusinessException;
 import co.com.tns.lazy.load.util.Constants;
 import org.springframework.stereotype.Component;
@@ -66,13 +67,14 @@ public class FileManager {
 
 
 
-	public List<Integer> showListOfElements(List<List> list) {
-		List<Integer> listOfElement = new ArrayList<>();
+	public void showListOfElements(List<List> list) {
+		Trip trip = new Trip();
+
 		for(int i=0; i<list.size(); i++)
 		{
-
+			trip.sortListOfWeights(list.get(i));
 		}
-		return listOfElement;
+
 	}
 
 }
