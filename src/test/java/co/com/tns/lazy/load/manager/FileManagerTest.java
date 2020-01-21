@@ -10,47 +10,33 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import co.com.tns.lazy.load.exception.BusinessException;
+import co.com.tns.lazy.load.util.Constants;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 
 import co.com.tns.lazy.load.manager.FileManager;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnitRunner;
 
-//@RunWith(MockitoJUnitRunner.class)
+@RunWith(MockitoJUnitRunner.class)
 public class FileManagerTest {
+	FileManager fileManager = new FileManager();
 
-	FileManager manager = new FileManager();
-	private static final String FILE_NAME = "hola.txt";
-	private File file = new File("C:\\projects\\lazy-load\\src\\main\\resources\\lazy_loading_example_input.txt");
-	private List<Integer> archivoEnTipoLista = Arrays.asList(5, 4, 30, 30, 1, 1, 3, 20, 20, 20, 11, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-			10, 11, 6, 9, 19, 29, 39, 49, 59, 10, 32, 56, 76, 8, 44, 60, 47, 85, 71, 91);
-	Scanner lector;
-
-	// FileService service = new FileService();
-
-	@Mock
-	FileManager fileManager;
-
-	//@Test
-	//public void debeConvertirUnFileALista() throws FileNotFoundException {
-	//	List<Integer> archivoListaResult = fileManager.convertirArchivoALista(file);
-	//	assertEquals(archivoEnTipoLista, archivoListaResult);
-	//}
-
-//	@Test
-//	public void debeVaidarArchivoNoNulo() {
-//		File file = new File(getClass().getClassLoader().getResource(FILE_NAME).getFile());
-//		when(fileManager.isNotNullFile(file)).thenReturn(true);
-//	}
-
-	// service.upload(file);
-	// FileManager fileManager = new FileManager();
-	// fileManager.convertirArchivoALista(file);
-
+	@Test
+	public void debeConvertirUnFileALista() throws FileNotFoundException {
+		File file = new File(getClass().getClassLoader().getResource("lazy_loading_example_input.txt").getFile());
+		List<Integer> archivoEnTipoLista = Arrays.asList(5, 4, 30, 30, 1, 1, 3, 20, 20, 20, 11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 6, 9, 19, 29, 39, 49, 59, 10, 32, 56, 76, 8, 44, 60, 47, 85, 71, 91);
+		List<Integer>  archivoEnTipoListaResult = fileManager.convertirArchivoALista(file);
+		assertEquals(archivoEnTipoLista, archivoEnTipoListaResult);
+	}
 
 	@Test
 	public void youMustSeparateAList() {
-
 		List<Integer> list = new ArrayList<>();
 		list.add(4);
 		list.add(4);
@@ -76,13 +62,9 @@ public class FileManagerTest {
 		object.add(29);
 		object.add(12);
 		object.add(1);
-		List<List> resultado = manager.separateList(list);
+		//List<List> resultado = manager.separateList(list);
 
-		Assert.assertEquals(object,resultado.get(0));
-
-
+		//Assert.assertEquals(object,resultado.get(0));
 	}
-
-
 
 }
