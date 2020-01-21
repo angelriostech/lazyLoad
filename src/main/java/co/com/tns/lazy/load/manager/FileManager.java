@@ -9,7 +9,9 @@ import java.util.stream.Collectors;
 
 import co.com.tns.lazy.load.exception.BusinessException;
 import co.com.tns.lazy.load.util.Constants;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FileManager {
 
 	public FileManager() {
@@ -61,6 +63,7 @@ public class FileManager {
 		}
 		return listDays;
 	}
+
 
 
 	public List<Integer> showListOfElements(List<List> list) {
