@@ -63,6 +63,13 @@ public class FileManager {
 	}
 
 
-	public List<Integer> listOfElements(List<List> listOfElements) {
+	public List<Integer> showListOfElements(List<List> list) {
+		List<Integer> listOfElement = new ArrayList<>();
+		for(int i=0; i<list.size(); i++)
+		{
+
+		}
+		return listOfElement;
 	}
+
 }
