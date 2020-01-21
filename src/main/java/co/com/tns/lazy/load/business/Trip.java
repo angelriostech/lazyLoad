@@ -12,6 +12,8 @@ import java.util.List;
 @Component
 public class Trip {
 
+	public static final int PESO_MINIMO_EN_BOLSA = 50;
+
 	public Trip() {
 		super();
 	}
@@ -22,34 +24,30 @@ public class Trip {
 	}
 
 	public int retornarNumeroDeViajes(List<Integer> lista) {
-		int incrementable = 0;
+		int numeroDeViajes = 0;
 		int cantidadElemetosDisponibles = lista.size();
 		for (int i = 0; i < lista.size(); i++) {
-			if (lista.get(i) >= 50) {
-				incrementable += 1;
+			if (lista.get(i) >= PESO_MINIMO_EN_BOLSA) {
+				numeroDeViajes += 1;
 				cantidadElemetosDisponibles--;
 			} else {
 				if (cantidadElemetosDisponibles <= 1) {
-					return incrementable;
+					return numeroDeViajes;
 				}
-
 				else {
-					int aumento = 2;
+					int factorAumentoDePeso = 2;
 					int pesoBolsa = 0;
-					while (pesoBolsa < 50 && cantidadElemetosDisponibles > 0) {
-						pesoBolsa = lista.get(i) * aumento;
-						aumento++;
+					while (pesoBolsa < PESO_MINIMO_EN_BOLSA && cantidadElemetosDisponibles > 0) {
+						pesoBolsa = lista.get(i) * factorAumentoDePeso;
+						factorAumentoDePeso++;
 						cantidadElemetosDisponibles--;
 					}
 					cantidadElemetosDisponibles--;
-					incrementable++;
+					numeroDeViajes++;
 				}
-
 			}
-
 		}
-		return incrementable;
-
+		return numeroDeViajes;
 	}
 
 }

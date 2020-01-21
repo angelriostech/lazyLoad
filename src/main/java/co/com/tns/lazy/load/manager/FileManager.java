@@ -5,9 +5,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
-import co.com.tns.lazy.load.business.Trip;
+
 import co.com.tns.lazy.load.exception.BusinessException;
 import co.com.tns.lazy.load.util.Constants;
 import org.springframework.stereotype.Component;

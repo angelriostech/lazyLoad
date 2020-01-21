@@ -38,7 +38,7 @@ public class TripTest {
 	
 	@Test
 	public void debeContarLosViajes() {
-		
+
 		List<Integer> lista = new ArrayList<Integer>();
 		lista.add(50);
 		int actual = trip.retornarNumeroDeViajes(lista);
