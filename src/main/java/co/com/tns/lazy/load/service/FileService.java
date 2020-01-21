@@ -26,7 +26,7 @@ public class FileService {
 		super();
 	}
 	
-	public void upload(File file) throws FileNotFoundException {
+	public String upload(File file) throws FileNotFoundException {
 		try {
 			List<Integer> archivoEnTipoLista = fileManager.convertirArchivoALista(file);
 			List<List> listSeparatedByListElements = fileManager.separateList(archivoEnTipoLista);
@@ -38,7 +38,7 @@ public class FileService {
 
 			}
 			//trip.retornarNumeroDeViajes(trip.sortListOfWeights(fileManager.showListOfElements(listSeparatedByListElements)));
-
+			return tripsByDay;
 		}catch (Exception exception) {
 			throw new BusinessException(Constants.FILE_ERROR_NOT_FOUND, exception);
 		}

@@ -24,8 +24,8 @@ public class FileController {
 	private FileService service;
 
 	@PostMapping("/upload")
-	public void upload(@RequestPart(value = "file") MultipartFile file) throws FileNotFoundException {
-		service.upload(FileUtil.convertToFile(file));
+	public String upload(@RequestPart(value = "file") MultipartFile file) throws FileNotFoundException {
+		return service.upload(FileUtil.convertToFile(file));
 	}
 
 	//@RequestMapping(value = "/example", method = RequestMethod.GET)
