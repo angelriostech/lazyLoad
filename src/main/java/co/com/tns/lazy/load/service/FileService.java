@@ -33,8 +33,8 @@ public class FileService {
 			String tripsByDay=" ";
 			for (int i=0; i<listSeparatedByListElements.size(); i++)
 			{
-				tripsByDay= tripsByDay + " "+ String.valueOf
-						(trip.retornarNumeroDeViajes(trip.sortListOfWeights(listSeparatedByListElements.get(i))));
+				tripsByDay= tripsByDay + "Case #"+String.valueOf(i+1)+": "+ String.valueOf
+						(trip.retornarNumeroDeViajes(trip.sortListOfWeights(listSeparatedByListElements.get(i))))+"\n";
 
 			}
 			//trip.retornarNumeroDeViajes(trip.sortListOfWeights(fileManager.showListOfElements(listSeparatedByListElements)));
