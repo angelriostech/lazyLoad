@@ -24,8 +24,9 @@ public class FileService {
     public String upload(File file) throws FileNotFoundException {
         try {
             List<Integer> archivoEnTipoLista = fileManager.convertirArchivoALista(file);
-            //List<List> listSeparatedByListElements = fileManager.separateList(archivoEnTipoLista);
-			return fileManager.maximizeElementsByDay(archivoEnTipoLista);
+
+            return fileManager.maximizeElementsByDay(archivoEnTipoLista);
+
 
         } catch (Exception exception) {
             throw new BusinessException(Constants.FILE_ERROR_LECTURE, exception);
