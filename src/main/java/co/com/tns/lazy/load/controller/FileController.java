@@ -15,8 +15,9 @@ public class FileController {
 	@Autowired
 	private IFileService service;
 
-	@PostMapping("/upload")
+	@PostMapping("/elementsByDay")
 	public String upload(@RequestPart(value = "file") MultipartFile file) {
-		return service.upload(FileUtil.convertToFile(file));
+
+		return service.maximizeElementsByDay(FileUtil.convertToFile(file));
 	}
 }

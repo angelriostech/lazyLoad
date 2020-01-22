@@ -17,7 +17,7 @@ public class Trip {
 		return listOfWeights;
 	}
 
-	public int retornarNumeroDeViajes(List<Integer> lista) {
+	public int getNumeroDeViajes(List<Integer> lista) {
 		int incrementable = 0;
 		int cantidadElemetosDisponibles = lista.size();
 		for (int i = 0; i < lista.size(); i++) {
@@ -44,7 +44,6 @@ public class Trip {
 			}
 
 		}
-
 		return incrementable;
 	}
 }

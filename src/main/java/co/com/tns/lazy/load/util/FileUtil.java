@@ -1,8 +1,7 @@
 package co.com.tns.lazy.load.util;
 
-import org.springframework.web.multipart.MultipartFile;
-
 import co.com.tns.lazy.load.exception.BusinessException;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -20,9 +19,9 @@ public final class FileUtil {
             fos.write(file.getBytes());
             fos.close();
             return convFile;
+
         }catch (IOException e){
             throw new BusinessException(Constants.FILE_ERROR, e);
         }
     }
-    
 }

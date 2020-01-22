@@ -4,5 +4,6 @@ import java.io.File;
 
 public interface IFileService {
 
-    String upload(File file);
+    String maximizeElementsByDay(File file);
+
 }
