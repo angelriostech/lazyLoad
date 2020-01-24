@@ -2,8 +2,6 @@ package co.com.tns.lazy.load.business;
 
 import org.junit.jupiter.api.Test;
 
-import co.com.tns.lazy.load.business.Trip;
-
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -38,7 +36,7 @@ public class TripTest {
 	public void debeContarLosViajes() {
 		List<Integer> lista = new ArrayList<Integer>();
 		lista.add(50);
-		int actual = trip.getNumeroDeViajes(lista);
+		int actual = trip.getNumberOfTrips(lista);
 		assertEquals(1, actual);
 	}
 }

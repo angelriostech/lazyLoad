@@ -65,7 +65,7 @@ public class FileManager {
         for (int i = 0; i < elements; i++) {
             List<Integer> separateList = separateList(listElementsByDay);
             List<Integer> listaOrdenada = trip.sortListOfWeights(separateList);
-            numeroViajes = trip.getNumeroDeViajes(listaOrdenada);
+            numeroViajes = trip.getNumberOfTrips(listaOrdenada);
             tripsByDay = tripsByDay.concat(Constants.CASE_NUMBER).concat(String.valueOf(i + 1)).
                     concat( Constants.SYMBOL_COLON).concat(Constants.SPACE).
                     concat(String.valueOf(numeroViajes)).concat(Constants.LINE_BREACK);
