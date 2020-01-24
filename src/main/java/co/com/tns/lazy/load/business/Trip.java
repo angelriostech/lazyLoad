@@ -8,13 +8,8 @@ import java.util.List;
 @Component
 public class Trip {
 
-	public Trip() {
-		super();
-	}
-
-	public List<Integer> sortListOfWeights(List<Integer> listOfWeights) {
+	public void sortListOfWeights(List<Integer> listOfWeights) {
 		Collections.sort(listOfWeights,Collections.reverseOrder());
-		return listOfWeights;
 	}
 
 	public int getNumeroDeViajes(List<Integer> lista) {
@@ -28,7 +23,6 @@ public class Trip {
 				if (cantidadElemetosDisponibles <= 1) {
 					return incrementable;
 				}
-
 				else {
 					int aumento = 2;
 					int pesoBolsa = 0;
@@ -40,10 +34,9 @@ public class Trip {
 					cantidadElemetosDisponibles--;
 					incrementable++;
 				}
-
 			}
-
 		}
+
 		return incrementable;
 	}
 }

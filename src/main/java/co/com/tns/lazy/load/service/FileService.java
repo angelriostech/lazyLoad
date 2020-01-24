@@ -1,9 +1,8 @@
 package co.com.tns.lazy.load.service;
 
+import co.com.tns.lazy.load.business.LazyLoad;
 import co.com.tns.lazy.load.business.Trip;
-import co.com.tns.lazy.load.exception.BusinessException;
 import co.com.tns.lazy.load.manager.FileManager;
-import co.com.tns.lazy.load.util.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,15 +16,11 @@ public class FileService implements IFileService {
     private FileManager fileManager;
 
     @Autowired
-    private Trip trip;
+    private LazyLoad lazyLoad;
 
     public String maximizeElementsByDay(File file) {
-        try {
-            List<Integer> archivoEnTipoLista = fileManager.convertirArchivoALista(file);
-            return fileManager.maximizeElementsByDay(archivoEnTipoLista);
-
-        } catch (Exception exception) {
-            throw new BusinessException(Constants.FILE_ERROR_LECTURE, exception);
-        }
+        //fileManager.validatefile(file);
+        List<Integer> archivoEnTipoLista = fileManager.convertFileToList(file);
+        return lazyLoad.maximizeElementsByDay(archivoEnTipoLista);
     }
 }

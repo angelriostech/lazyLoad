@@ -30,8 +30,8 @@ public class TripTest {
 		listOfWeightsOrdered.add(3);
 		listOfWeightsOrdered.add(1);
 		
-		List<Integer> listOfWeightsResult = trip.sortListOfWeights(listOfWeights);
-		assertEquals(listOfWeightsResult, listOfWeightsOrdered);
+		trip.sortListOfWeights(listOfWeights);
+		assertEquals(listOfWeights, listOfWeightsOrdered);
 	}
 	
 	@Test
