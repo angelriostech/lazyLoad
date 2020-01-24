@@ -31,9 +31,9 @@ public class Trip {
 
 				else {
 					int magnificationFactor = 2;
-					int bagWwight = 0;
-					while (bagWwight < 50 && availableObjects > 0) {
-						bagWwight = lista.get(i) * magnificationFactor;
+					int bagWight = 0;
+					while (bagWight < 50 && availableObjects > 0) {
+						bagWight = lista.get(i) * magnificationFactor;
 						magnificationFactor++;
 						availableObjects--;
 					}
