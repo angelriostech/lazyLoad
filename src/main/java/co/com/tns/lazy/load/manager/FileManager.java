@@ -44,7 +44,7 @@ public class FileManager {
 
 
     public List<Integer> separateList(List<Integer> list) { ;
-        List<Integer> listDays = new ArrayList<>();
+
         int elements = 0;
         this.apuntadorNumElemts++;
         elements = list.get(this.apuntadorNumElemts);
