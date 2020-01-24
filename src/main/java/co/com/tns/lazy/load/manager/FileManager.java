@@ -18,9 +18,6 @@ import java.util.Scanner;
 public class FileManager {
 
     @Autowired
-    private Trip trip;
-
-    @Autowired
     private FileValidate validate;
 
     public List<Integer> convertFileToList(File file) {
