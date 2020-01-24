@@ -12,31 +12,30 @@ public class Trip {
 		Collections.sort(listOfWeights,Collections.reverseOrder());
 	}
 
-	public int getNumeroDeViajes(List<Integer> lista) {
-		int incrementable = 0;
-		int cantidadElemetosDisponibles = lista.size();
+	public int getNumberOfTrips(List<Integer> lista) {
+		int numberTrips = 0;
+		int availableObjects = lista.size();
 		for (int i = 0; i < lista.size(); i++) {
 			if (lista.get(i) >= 50) {
-				incrementable += 1;
-				cantidadElemetosDisponibles--;
+				numberTrips += 1;
+				availableObjects--;
 			} else {
-				if (cantidadElemetosDisponibles <= 1) {
-					return incrementable;
+				if (availableObjects <= 1) {
+					return numberTrips;
 				}
 				else {
-					int aumento = 2;
-					int pesoBolsa = 0;
-					while (pesoBolsa < 50 && cantidadElemetosDisponibles > 0) {
-						pesoBolsa = lista.get(i) * aumento;
-						aumento++;
-						cantidadElemetosDisponibles--;
+					int magnificationFactor = 2;
+					int bagWight = 0;
+					while (bagWight < 50 && availableObjects > 0) {
+						bagWight = lista.get(i) * magnificationFactor;
+						magnificationFactor++;
+						availableObjects--;
 					}
-					cantidadElemetosDisponibles--;
-					incrementable++;
+					availableObjects--;
+					numberTrips++;
 				}
 			}
 		}
-
-		return incrementable;
+		return numberTrips;
 	}
 }

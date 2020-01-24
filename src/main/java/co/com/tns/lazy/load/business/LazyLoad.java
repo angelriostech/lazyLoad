@@ -39,7 +39,7 @@ public class LazyLoad {
         for (int day = 0; day < totalDays; day++) {
             List<Integer> weightsOfDay = separateList(listElementsByDay);
             trip.sortListOfWeights(weightsOfDay);
-            numeroViajes = trip.getNumeroDeViajes(weightsOfDay);
+            numeroViajes = trip.getNumberOfTrips(weightsOfDay);
             tripsByDay = tripsByDay.concat(Constants.CASES_NUMBER).concat(String.valueOf(day + 1)).
                     concat(Constants.SYMBOL_COLON).concat(Constants.SPACE).
                     concat(String.valueOf(numeroViajes)).concat(Constants.LINE_BREACK);
