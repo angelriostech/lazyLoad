@@ -7,23 +7,23 @@ pipeline {
 	}
 
 	stages {
+		stage ('Build') {
+			steps {
+				sh 'gradle build'
+			}
+		}
+	
 		stage ('Unit Tests') {
 			steps {	
 				sh 'gradle test'
 			}
 		}
-/*
+
 		stage('Code Analysis') {
 			steps {
-				withSonarQubeEnv('SonarQubeLocal') {
-					sh 'gradle --info sonarqube -x test'
+				withSonarQubeEnv('SonarqubeLocal') {
+					sh 'gradle sonarqube'
 				}
-			}
-		}
-*/
-		stage ('Build') {
-			steps {
-				sh 'gradle build'
 			}
 		}
 	
