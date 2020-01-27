@@ -12,7 +12,7 @@ pipeline {
 				bat 'gradle build'
 			}
 		}
-	
+/**	
 		stage ('Unit Tests') {
 			steps {	
 				bat 'gradle test'
@@ -32,6 +32,6 @@ pipeline {
 					bat 'java -jar build/libs/lazy-load-0.0.1-SNAPSHOT.jar &' 
 		 		}
 		}
-
+**/
 	}
 }
