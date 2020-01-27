@@ -9,7 +9,7 @@ pipeline {
 	stages {
 		stage ('Build') {
 			steps {
-				powershell 'gradle build'
+				powershell 'gradle build --no-daemon'
 			}
 		}
 		/**
