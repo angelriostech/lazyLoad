@@ -9,26 +9,26 @@ pipeline {
 	stages {
 		stage ('Build') {
 			steps {
-				sh 'gradle build'
+				powershell 'gradle build'
 			}
 		}
 		/**
 		stage ('Unit Tests') {
 			steps {	
-				sh 'gradle test'
+				powershell 'gradle test'
 			}
 		}
 		stage('Code Analysis') {
 			steps {
 				withSonarQubeEnv('SonarqubeLocal') {
-					bat 'gradle sonarqube'
+					powershell 'gradle sonarqube'
 				}
 			}
 		}
 	
 		stage ('Deployment') { 
 		  		steps {
-					bat 'java -jar build/libs/lazy-load-0.0.1-SNAPSHOT.jar &' 
+					powershell 'java -jar build/libs/lazy-load-0.0.1-SNAPSHOT.jar &' 
 		 		}
 		}
 **/
