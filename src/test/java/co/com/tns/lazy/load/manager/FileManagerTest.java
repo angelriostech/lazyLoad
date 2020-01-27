@@ -47,5 +47,29 @@ public class FileManagerTest {
 
 		Assert.assertEquals(listaDePrueba, resultado);
 	}
+	@Test
+	public void shouldReturnNumberTripByDay()
+	{
+		List<Integer> listElementsByDay = new ArrayList<>();
+		//days
+		listElementsByDay.add(1);
+		//elements
+		listElementsByDay.add(4);
+		//weights
+		listElementsByDay.add(30);
+		listElementsByDay.add(29);
+		listElementsByDay.add(12);
+		listElementsByDay.add(1);
+		listElementsByDay.add(4);
+		//weights
+		listElementsByDay.add(30);
+		listElementsByDay.add(29);
+		listElementsByDay.add(12);
+		listElementsByDay.add(1);
+		String result = fileManager.maximizeElementsByDay(listElementsByDay);
+		String expected = "";
+		assertEquals(expected, result);
+
+	}
 
 }
