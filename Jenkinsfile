@@ -12,13 +12,12 @@ pipeline {
 				bat 'gradle build'
 			}
 		}
-/**	
 		stage ('Unit Tests') {
 			steps {	
 				bat 'gradle test'
 			}
 		}
-
+/**
 		stage('Code Analysis') {
 			steps {
 				withSonarQubeEnv('SonarqubeLocal') {
