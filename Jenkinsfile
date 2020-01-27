@@ -27,7 +27,7 @@ pipeline {
 			}
 		}
 	
-		stage ('Deployment') {
+		stage ('Deployment') { 
 		  		steps {
 					sh 'java -jar build/libs/lazy-load-0.0.1-SNAPSHOT.jar &' 
 		 		}
