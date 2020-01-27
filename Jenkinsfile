@@ -9,15 +9,15 @@ pipeline {
 	stages {
 		stage ('Build') {
 			steps {
-				bat 'gradle build'
+				sh 'gradle build'
 			}
 		}
+		/**
 		stage ('Unit Tests') {
 			steps {	
-				bat 'gradle test'
+				sh 'gradle test'
 			}
 		}
-/**
 		stage('Code Analysis') {
 			steps {
 				withSonarQubeEnv('SonarqubeLocal') {
